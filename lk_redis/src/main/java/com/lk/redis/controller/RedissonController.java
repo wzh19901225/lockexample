@@ -21,6 +21,14 @@ public class RedissonController {
 
     @RequestMapping("/deductStock")
     public  String deductStock(){
+        /**
+         * todo 提升高并发思路 分段锁  将库存分段
+         * item_001     100个
+         * item_001_1  10
+         * item_001_2  10
+         * ...
+         */
+
         String lockKey = "item_001";//商品id
         String clientId = UUID.randomUUID().toString();
         RLock rLock = redisson.getLock(lockKey);
