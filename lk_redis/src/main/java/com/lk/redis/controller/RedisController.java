@@ -16,8 +16,8 @@ public class RedisController {
     @Autowired
     StringRedisTemplate stringRedisTemplate;
 
-    @RequestMapping("/deductStock")
-    public  String deductStock(){
+    @RequestMapping("/deStock")
+    public  String deStock(){
         String lockKey = "item_001";//商品id
         String clientId = UUID.randomUUID().toString();
         try {
