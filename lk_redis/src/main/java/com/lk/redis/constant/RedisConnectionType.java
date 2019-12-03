@@ -7,7 +7,7 @@ package com.lk.redis.constant;
  *              cluster-集群方式
  *              masterslave-主从部署方式
  *
- * @author xub
+ * @author wangzh
  * @date 2019/6/20 下午4:21
  */
 public enum RedisConnectionType {

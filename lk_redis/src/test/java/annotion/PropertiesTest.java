@@ -16,6 +16,6 @@ public class PropertiesTest {
 
     @Test
     public  void RedissonPropertiesTest(){
-        System.out.println(redissonProperties.getAddress());
+        System.out.println(redissonProperties.getPassword());
     }
 }

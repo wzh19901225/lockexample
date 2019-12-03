@@ -12,7 +12,7 @@ import org.redisson.config.Config;
 /**
  * @Description: 哨兵集群部署Redis连接配置
  *
- * @author xub
+ * @author wangzh
  * @date 2019/6/19 下午9:17
  */
 @Slf4j

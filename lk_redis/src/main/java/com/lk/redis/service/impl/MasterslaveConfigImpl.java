@@ -15,7 +15,7 @@ import java.util.List;
  * @Description:  主从部署Redisson配置
  *       连接方式:  主节点,子节点,子节点
  *         格式为:  127.0.0.1:6379,127.0.0.1:6380,127.0.0.1:6381
- * @author xub
+ * @author wangzh
  * @date 2019/6/19 下午9:21
  */
 

@@ -15,7 +15,7 @@ import org.redisson.config.Config;
 /**
  * @Description: Redisson核心配置，用于提供初始化的redisson实例
  *
- * @author xub
+ * @author wangzh
  * @date 2019/6/19 下午10:16
  */
 @Slf4j

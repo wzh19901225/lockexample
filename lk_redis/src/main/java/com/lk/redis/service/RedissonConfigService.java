@@ -7,7 +7,7 @@ import org.redisson.config.Config;
 /**
  * @Description: Redisson配置构建接口
  *
- * @author xub
+ * @author wangzh
  * @date 2019/6/20 下午3:35
  */
 public interface RedissonConfigService {

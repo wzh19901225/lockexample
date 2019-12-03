@@ -9,7 +9,7 @@ import org.springframework.context.annotation.PropertySource;
 /**
  * @Description: 读取redis配置信息，封装到当前实体中
  *
- * @author xub
+ * @author wangzh
  * @date 2019/6/19 下午9:35
  */
 @PropertySource({"classpath:application-redis.properties"})
