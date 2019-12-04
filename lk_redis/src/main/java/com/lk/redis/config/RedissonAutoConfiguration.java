@@ -16,7 +16,9 @@ import org.springframework.core.annotation.Order;
 
 /**
  * @Description: Redisson自动化配置
- *
+ * @ConditionalOnClass：该注解的参数对应的类必须存在，否则不解析该注解修饰的配置类；
+ * @ConditionalOnMissingBean：该注解表示，如果存在它修饰的类的bean，则不需要再创建这个bean；可以给该注解传入参数例如@ConditionOnMissingBean(name = "example")
+ * ，这个表示如果name为“example”的bean存在，这该注解修饰的代码块不执行
  * @author wangzh
  * @date 2019/6/19 下午11:55
  */

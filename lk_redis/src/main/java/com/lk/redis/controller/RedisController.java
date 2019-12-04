@@ -2,7 +2,7 @@ package com.lk.redis.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
@@ -16,7 +16,7 @@ public class RedisController {
     @Autowired
     StringRedisTemplate stringRedisTemplate;
 
-    @RequestMapping("/deStock")
+    @GetMapping("/deStock")
     public  String deStock(){
         String lockKey = "item_001";//商品id
         String clientId = UUID.randomUUID().toString();

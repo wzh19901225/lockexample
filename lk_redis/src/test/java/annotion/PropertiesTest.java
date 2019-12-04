@@ -18,4 +18,6 @@ public class PropertiesTest {
     public  void RedissonPropertiesTest(){
         System.out.println(redissonProperties.getPassword());
     }
+
+
 }
