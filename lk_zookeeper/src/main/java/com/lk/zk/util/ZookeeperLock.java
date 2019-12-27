@@ -54,12 +54,13 @@ public class ZookeeperLock implements Lock, Watcher {
     }
 
     // 节点监视器
+    @Override
     public void process(WatchedEvent event) {
         if (this.countDownLatch != null) {
             this.countDownLatch.countDown();
         }
     }
-
+    @Override
     public void lock() {
         if (exceptionList.size() > 0) {
             throw new LockException(exceptionList.get(0));
@@ -78,7 +79,7 @@ public class ZookeeperLock implements Lock, Watcher {
             e.printStackTrace();
         }
     }
-
+    @Override
     public boolean tryLock() {
         try {
             String splitStr = "_lock_";
@@ -116,7 +117,7 @@ public class ZookeeperLock implements Lock, Watcher {
         }
         return false;
     }
-
+    @Override
     public boolean tryLock(long timeout, TimeUnit unit) {
         try {
             if (this.tryLock()) {
@@ -128,7 +129,6 @@ public class ZookeeperLock implements Lock, Watcher {
         }
         return false;
     }
-
     // 等待锁
     private boolean waitForLock(String prev, long waitTime) throws KeeperException, InterruptedException {
         Stat stat = zk.exists(ROOT_LOCK + "/" + prev, true);
@@ -143,7 +143,7 @@ public class ZookeeperLock implements Lock, Watcher {
         }
         return true;
     }
-
+    @Override
     public void unlock() {
         try {
             System.out.println("释放锁 " + CURRENT_LOCK);
