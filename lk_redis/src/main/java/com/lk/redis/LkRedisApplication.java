@@ -16,6 +16,10 @@ public class LkRedisApplication {
 		SpringApplication.run(LkRedisApplication.class, args);
 	}
 
+	/**
+	 * 0323
+	 * @return
+	 */
 	@Bean
 	public Redisson redisson(){
 		//此为 单机模式
