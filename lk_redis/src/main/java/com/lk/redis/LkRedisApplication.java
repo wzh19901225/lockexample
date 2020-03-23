@@ -29,4 +29,6 @@ public class LkRedisApplication {
 		config.useSingleServer().setAddress("http://120.76.242.182:16379").setPassword("123456");
 		return (Redisson) Redisson.create(config);
 	}
+
+//	12
 }
