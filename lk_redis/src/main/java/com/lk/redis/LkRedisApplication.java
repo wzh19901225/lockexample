@@ -21,7 +21,6 @@ public class LkRedisApplication {
 	 */
 	@Bean
 	public Redisson redisson(){
-		//此为单机模式
 		Config config = new Config();
 		config.useSingleServer().setAddress("http://120.76.242.182:16379").setPassword("123456");
 		return (Redisson) Redisson.create(config); //12
